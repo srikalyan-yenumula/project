@@ -1,44 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GuessGame</title>
-    <link rel="stylesheet" href="Home.css">
+    <title>Guess Game</title>
+    <link rel="stylesheet" href="home.css">
+   
 </head>
-
 <body>
-    <header><h1 id="wel"> <p id="a1"  class="col">W</p><p id="a2" class="col">e</p><p id="a3"  class="col">l</p><p id="a4"  class="col">c</p><p id="a5" class="col">o</p><p id="a6"  class="col">m</p><p id="a7" class="col">e </p><p id="a8"  class="col">t</p><p id="a9"  class="col">o</p><br></h1>
-      <br>
-        <div style="border: solid black;">
-            
-            <div class="heading">G</div>
-            <sub>uess</sub>
-            <div class="heading">G</div>
-            <sub>ame</sub>
-            <div class="heading">Q</div>
-            <sub>uiz</sub>
-            
+    <header>
+        <h1 class="welcome">
+            <span class="colorful-text">W</span>
+            <span class="colorful-text">e</span>
+            <span class="colorful-text">l</span>
+            <span class="colorful-text">c</span>
+            <span class="colorful-text">o</span>
+            <span class="colorful-text">m</span>
+            <span class="colorful-text">e</span><span>&nbsp;</span>
+            <span class="colorful-text">T</span>
+            <span class="colorful-text">o</span>
+        </h1>
+        <div class="logo-container">
+            <div class="heading">G</div><sub class="subtext">uess</sub>
+            <div class="heading">G</div><sub class="subtext">ame</sub>
+            <div class="heading">Q</div><sub class="subtext">uiz</sub>
         </div>
     </header>
-    <footer>
-        <div class="main" >
+    
+    <main>
+        <div class="form-container">
             <form action="game.html" method="post">
-                <label for="name" ><b>Name:</b></label>
-                <input name="name" id="name" type="text" placeholder="Enter name" required >
-               <br>
-                <br>
-                <label for="radio">Gender:</label>
-                <input type="radio" required id="radio" name="gender" value="m" class="c">
-                <label for="radio"class="a">Male</label>
-                <input type="radio" required id="radio" name="gender" value="f">
-                <label for="radio">Female</label>
-                <br><br>
-                <button type="submit">Play</button></form>
-            </div>
-    </footer>
-   
+                <div class="form-group">
+                    <label for="name"><b>Name:</b></label>
+                    <input name="name" id="name" type="text" placeholder="Enter your name" required>
+                </div>
+                
+                <div class="gender-group">
+                    <label for="gender"><b>Gender:</b></label>
+                    <input type="radio" id="male" name="gender" value="m" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="f" required>
+                    <label for="female">Female</label>
+                </div>
+                
+                <button type="submit">Play</button>
+            </form>
+        </div>
+    </main>
 </body>
-
 </html>
