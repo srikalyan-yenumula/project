@@ -1,0 +1,58 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #282c34; /* Darker background color */
+    color: #61dafb; /* Light blue text color */
+    font-family: 'Press Start 2P', cursive;
+}
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(2, 100px);
+    gap: 30px;
+}
+button {
+    width: 150px;
+    height: 100px;
+    background-color: #4CAF50; /* Green color */
+    color: #fff; /* White text color */
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s, color 0.3s;
+    border-bottom: 5px solid #388E3C; /* Darker bottom border for 3D effect */
+    position: relative; /* For positioning coins */
+    overflow: hidden; /* Hide overflow for coins */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow */
+}
+button:hover {
+    background: linear-gradient(45deg, #66BB6A, #4CAF50); /* Gradient effect on hover */
+    color: #20232a; /* Darker text color on hover */
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* Enhance text shadow on hover */
+}
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 60%);
+    transition: opacity 0.3s;
+    opacity: 0;
+}
+button:hover::before {
+    opacity: 1;
+}
